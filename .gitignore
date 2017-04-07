@@ -1,7 +1,11 @@
-/coverage
-/demo/dist
-/es
-/lib
-/node_modules
-/umd
-npm-debug.log*
+# Don't check auto-generated stuff into git
+coverage
+build
+node_modules
+vendor
+stats.json
+
+# Cruft
+.DS_Store
+npm-debug.log
+.idea

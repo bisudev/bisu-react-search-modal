@@ -1,0 +1,22 @@
+.bisu--search-modal {
+  .search-form {
+  	position: relative;
+  	width: 90%;
+
+  	.form-control {
+  		border: 0;
+  		outline: 0;
+  		font-size: 1.4em;
+  		padding-left: 35px;
+      box-shadow: none;
+  	}
+
+  	.add-on {
+  		position: absolute;
+  		top: -6px;
+  		left: 0;
+  		font-size: 2em;
+  		color: $gray-light;
+  	}
+  }
+}
