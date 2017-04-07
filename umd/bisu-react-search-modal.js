@@ -1,5 +1,5 @@
 /*!
- * bisu-react-search-modal v1.0.0
+ * bisu-react-search-modal v1.0.1
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -10269,9 +10269,7 @@ var Form = function (_Component) {
   Form.prototype.render = function render() {
     var _this2 = this;
 
-    var _props = this.props,
-        placeholder = _props.placeholder,
-        icon = _props.icon;
+    var placeholder = this.props.placeholder;
 
 
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -10313,13 +10311,7 @@ var Form = function (_Component) {
             },
             __self: this
           },
-          icon ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('icon', {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 24
-            },
-            __self: this
-          }) : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_icons_lib_md_search___default.a, {
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_icons_lib_md_search___default.a, {
             __source: {
               fileName: _jsxFileName,
               lineNumber: 24

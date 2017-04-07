@@ -9,7 +9,7 @@ class Form extends Component {
   }
 
   render() {
-    const { placeholder, icon } = this.props
+    const { placeholder } = this.props
 
     return (
       <form className="search-form" onSubmit={this._onSubmit}>
@@ -21,7 +21,7 @@ class Form extends Component {
             ref={(c) => this._input = c}
             autoFocus
           />
-          <div className="add-on">{icon ? <icon /> : <Icon />}</div>
+          <div className="add-on"><Icon /></div>
         </div>
       </form>
     )

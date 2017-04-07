@@ -1,6 +1,6 @@
 {
   "name": "bisu-react-search-modal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "bisu-react-search-modal React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -20,7 +20,7 @@
     "prepublish": "npm run build"
   },
   "dependencies": {
-    "bisu-react-modal": "1.0.2",
+    "bisu-react-modal": "1.0.3",
     "bootstrap-sass": "3.3.7",
     "react-icons": "2.2.3"
   },
@@ -36,7 +36,7 @@
   "author": "",
   "homepage": "",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/bisudev/bisu-react-search-modal.git",
   "keywords": [
     "react-component"
   ]

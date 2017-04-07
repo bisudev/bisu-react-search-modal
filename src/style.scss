@@ -19,4 +19,38 @@
   		color: $gray-light;
   	}
   }
+  .list-group {
+		margin-top: 20px;
+
+		.table {
+			margin-bottom: 0;
+		}
+
+		td {
+			padding: 7px;
+		}
+	}
+
+	.list-group-item {
+		padding: 0;
+		border: 0;
+
+		&:hover {
+			.btn-inline {
+				color: #222;
+			}
+		}
+
+		&:focus {
+			.btn-inline {
+				color: $brand-primary;
+			}
+		}
+
+		&:first-child {
+			td {
+				border-top: 1px solid $gray-dark;
+			}
+		}
+	}
 }

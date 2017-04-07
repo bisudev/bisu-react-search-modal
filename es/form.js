@@ -28,9 +28,7 @@ var Form = function (_Component) {
   Form.prototype.render = function render() {
     var _this2 = this;
 
-    var _props = this.props,
-        placeholder = _props.placeholder,
-        icon = _props.icon;
+    var placeholder = this.props.placeholder;
 
 
     return React.createElement(
@@ -51,7 +49,7 @@ var Form = function (_Component) {
         React.createElement(
           'div',
           { className: 'add-on' },
-          icon ? React.createElement('icon', null) : React.createElement(Icon, null)
+          React.createElement(Icon, null)
         )
       )
     );

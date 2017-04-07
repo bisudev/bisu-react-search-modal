@@ -12,7 +12,7 @@ then include this scss file to your main scss
 `@import '~bisu-react-search-modal/lib/style.scss';`
 
 ## Usage
-```
+```jsx
 import React, { Component } from 'react'
 import SearchModal from 'bisu-react-search-modal'
 
