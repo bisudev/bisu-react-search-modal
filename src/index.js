@@ -1,31 +1,50 @@
-import React, { PropTypes, Component } from 'react'
+import React from 'react'
 import Modal from 'bisu-react-modal'
-import Icon from 'react-icons/lib/md/search'
+import cn from 'classnames'
 
 import Form from './form'
 
-const SearchModal = ({ placeholder, isOpen, handleClose, onSubmit, children }) => {
+const SearchModal = ({
+  children,
+  model,
+  className,
+  overlayClassName,
+  placeholder,
+  isOpen,
+  draggable,
+  onClose,
+  onSubmit,
+}) => {
   if (!isOpen) {
     return null
   }
 
+  const cl = cn('bisu--search-modal', className)
+
   return (
-    <Modal handleClose={handleClose} isOpen>
-      <div className="bisu--search-modal">
-        <Form
-          placeholder={placeholder}
-          onSubmit={onSubmit}
-        />
+    <Modal
+      className={cl}
+      overlayClassName={overlayClassName}
+      onClose={onClose}
+      draggable={draggable}
+      withClose
+      isOpen
+    >
+      <div className="bisu--search-modal-wrapper">
+        <Form model={model} placeholder={placeholder} onSubmit={onSubmit} />
         {children}
       </div>
     </Modal>
   )
 }
 
-SearchModal.propTypes = {
-  placeholder: PropTypes.string,
-  onSubmit: PropTypes.func,
-  children: PropTypes.any,
+SearchModal.defaultProps = {
+  overlayClassName: 'dark',
 }
 
 export default SearchModal
+
+export ResultWrapper from './result-wrapper'
+export ResultHeader from './result-header'
+export ResultItemWrapper from './result-item-wrapper'
+export ResultSpan from './result-span'

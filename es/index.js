@@ -1,39 +1,56 @@
-import React, { PropTypes, Component } from 'react';
+import React from 'react';
 import Modal from 'bisu-react-modal';
-import Icon from 'react-icons/lib/md/search';
+import cn from 'classnames';
 
 import Form from './form';
 
 var SearchModal = function SearchModal(_ref) {
-  var placeholder = _ref.placeholder,
+  var children = _ref.children,
+      model = _ref.model,
+      className = _ref.className,
+      overlayClassName = _ref.overlayClassName,
+      placeholder = _ref.placeholder,
       isOpen = _ref.isOpen,
-      handleClose = _ref.handleClose,
-      onSubmit = _ref.onSubmit,
-      children = _ref.children;
+      draggable = _ref.draggable,
+      onClose = _ref.onClose,
+      onSubmit = _ref.onSubmit;
 
   if (!isOpen) {
     return null;
   }
 
+  var cl = cn('bisu--search-modal', className);
+
   return React.createElement(
     Modal,
-    { handleClose: handleClose, isOpen: true },
+    {
+      className: cl,
+      overlayClassName: overlayClassName,
+      onClose: onClose,
+      draggable: draggable,
+      withClose: true,
+      isOpen: true
+    },
     React.createElement(
       'div',
-      { className: 'bisu--search-modal' },
-      React.createElement(Form, {
-        placeholder: placeholder,
-        onSubmit: onSubmit
-      }),
+      { className: 'bisu--search-modal-wrapper' },
+      React.createElement(Form, { model: model, placeholder: placeholder, onSubmit: onSubmit }),
       children
     )
   );
 };
 
-process.env.NODE_ENV !== "production" ? SearchModal.propTypes = {
-  placeholder: PropTypes.string,
-  onSubmit: PropTypes.func,
-  children: PropTypes.any
-} : void 0;
+SearchModal.defaultProps = {
+  overlayClassName: 'dark'
+};
 
 export default SearchModal;
+
+import _ResultWrapper from './result-wrapper';
+export { _ResultWrapper as ResultWrapper };
+import _ResultHeader from './result-header';
+export { _ResultHeader as ResultHeader };
+import _ResultItemWrapper from './result-item-wrapper';
+export { _ResultItemWrapper as ResultItemWrapper };
+import _ResultSpan from './result-span';
+export { _ResultSpan as ResultSpan };

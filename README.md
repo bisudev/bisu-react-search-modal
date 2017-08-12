@@ -8,7 +8,9 @@ React Search Modal similar to Spotlight.
 
 ## Installation
 `npm install --save bisu-react-search-modal`  
-then include this scss file to your main scss
+then include this scss file to your main scss  
+
+`@import '~bisu-react-modal/lib/style.scss';`
 `@import '~bisu-react-search-modal/lib/style.scss';`
 
 ## Usage
