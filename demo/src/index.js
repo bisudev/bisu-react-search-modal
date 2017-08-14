@@ -128,6 +128,8 @@ class Demo extends Component {
               onSubmit={this._onSubmit}
               onClose={this._closeModal}
               draggable
+              offline
+              searching
             >
               {this._renderResults()}
             </SearchModal>

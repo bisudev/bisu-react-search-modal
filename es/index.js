@@ -10,10 +10,12 @@ var SearchModal = function SearchModal(_ref) {
       className = _ref.className,
       overlayClassName = _ref.overlayClassName,
       placeholder = _ref.placeholder,
+      onClose = _ref.onClose,
+      onSubmit = _ref.onSubmit,
       isOpen = _ref.isOpen,
       draggable = _ref.draggable,
-      onClose = _ref.onClose,
-      onSubmit = _ref.onSubmit;
+      offline = _ref.offline,
+      searching = _ref.searching;
 
   if (!isOpen) {
     return null;
@@ -34,7 +36,13 @@ var SearchModal = function SearchModal(_ref) {
     React.createElement(
       'div',
       { className: 'bisu--search-modal-wrapper' },
-      React.createElement(Form, { model: model, placeholder: placeholder, onSubmit: onSubmit }),
+      React.createElement(Form, {
+        model: model,
+        placeholder: placeholder,
+        onSubmit: onSubmit,
+        offline: offline,
+        searching: searching
+      }),
       children
     )
   );

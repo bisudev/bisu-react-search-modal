@@ -3,11 +3,26 @@ var _this = this;
 import React from 'react';
 import { Form as RForm, Field } from 'react-redux-form/immutable';
 import Icon from 'react-icons/lib/md/search';
+import Icon2 from 'react-icons/lib/ti/zoom-outline';
+import ThreeBounce from 'better-react-spinkit/dist/ThreeBounce';
+
+var _renderIcon = function _renderIcon(searching, offline) {
+  if (searching) {
+    return React.createElement(ThreeBounce, { color: '#bbb', size: 8 });
+  }
+  if (offline) {
+    return React.createElement(Icon2, null);
+  }
+
+  return React.createElement(Icon, null);
+};
 
 var Form = function Form(_ref) {
   var model = _ref.model,
       placeholder = _ref.placeholder,
-      onSubmit = _ref.onSubmit;
+      onSubmit = _ref.onSubmit,
+      searching = _ref.searching,
+      offline = _ref.offline;
   return React.createElement(
     RForm,
     { model: model, className: 'search-form', onSubmit: onSubmit },
@@ -21,12 +36,13 @@ var Form = function Form(_ref) {
         ref: function ref(c) {
           return _this._input = c;
         },
+        autoComplete: 'off',
         autoFocus: true
       }),
       React.createElement(
         'div',
         { className: 'add-on' },
-        React.createElement(Icon, null)
+        _renderIcon(searching, offline)
       )
     )
   );
