@@ -1,5 +1,5 @@
 /*!
- * bisu-react-search-modal v1.0.3
+ * bisu-react-search-modal v1.0.4
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -33393,7 +33393,11 @@ var Close = function Close(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_icons_lib_ti_zoom_outline___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_icons_lib_ti_zoom_outline__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_better_react_spinkit_dist_ThreeBounce__ = __webpack_require__(334);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_better_react_spinkit_dist_ThreeBounce___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_better_react_spinkit_dist_ThreeBounce__);
-var _this = this;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 
 
@@ -33412,66 +33416,60 @@ var _renderIcon = function _renderIcon(searching, offline) {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_icons_lib_md_search___default.a, null);
 };
 
-var Form = function Form(_ref) {
-  var model = _ref.model,
-      placeholder = _ref.placeholder,
-      onSubmit = _ref.onSubmit,
-      searching = _ref.searching,
-      offline = _ref.offline;
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_1_react_redux_form_immutable__["Form"],
-    { model: model, className: 'search-form', onSubmit: onSubmit },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1_react_redux_form_immutable__["Field"],
-      { model: '.q' },
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
-        type: 'text',
-        className: 'form-control',
-        placeholder: placeholder,
-        ref: function ref(c) {
-          return _this._input = c;
-        },
-        autoComplete: 'off',
-        autoFocus: true
-      }),
+var Form = function (_Component) {
+  _inherits(Form, _Component);
+
+  function Form() {
+    _classCallCheck(this, Form);
+
+    return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+  }
+
+  Form.prototype.componentDidMount = function componentDidMount() {
+    var _this2 = this;
+
+    setTimeout(function () {
+      _this2._input.select();
+    }, 10);
+  };
+
+  Form.prototype.render = function render() {
+    var _this3 = this;
+
+    var _props = this.props,
+        model = _props.model,
+        placeholder = _props.placeholder,
+        onSubmit = _props.onSubmit,
+        searching = _props.searching,
+        offline = _props.offline;
+
+
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1_react_redux_form_immutable__["Form"],
+      { model: model, className: 'search-form', onSubmit: onSubmit },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: 'add-on' },
-        _renderIcon(searching, offline)
+        __WEBPACK_IMPORTED_MODULE_1_react_redux_form_immutable__["Field"],
+        { model: '.q' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
+          type: 'text',
+          className: 'form-control',
+          placeholder: placeholder,
+          ref: function ref(c) {
+            return _this3._input = c;
+          },
+          autoComplete: 'off'
+        }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'add-on' },
+          _renderIcon(searching, offline)
+        )
       )
-    )
-  );
-};
+    );
+  };
 
-/*
-class Form extends Component {
-  _onSubmit = e => {
-    e.preventDefault()
-    this.props.onSubmit(this._input.value)
-  }
-
-  render() {
-    const { placeholder } = this.props
-
-    return (
-      <RForm className="search-form" onSubmit={this._onSubmit}>
-        <div>
-          <input
-            type="text"
-            className="form-control"
-            placeholder={placeholder}
-            ref={c => (this._input = c)}
-            autoFocus
-          />
-          <div className="add-on">
-            <Icon />
-          </div>
-        </div>
-      </RForm>
-    )
-  }
-}
-*/
+  return Form;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 /* harmony default export */ __webpack_exports__["a"] = (Form);
 

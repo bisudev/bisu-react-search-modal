@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Form as RForm, Field } from 'react-redux-form/immutable'
 import Icon from 'react-icons/lib/md/search'
 import Icon2 from 'react-icons/lib/ti/zoom-outline'
@@ -15,51 +15,33 @@ const _renderIcon = (searching, offline) => {
   return <Icon />
 }
 
-const Form = ({ model, placeholder, onSubmit, searching, offline }) =>
-  <RForm model={model} className="search-form" onSubmit={onSubmit}>
-    <Field model=".q">
-      <input
-        type="text"
-        className="form-control"
-        placeholder={placeholder}
-        ref={c => (this._input = c)}
-        autoComplete="off"
-        autoFocus
-      />
-      <div className="add-on">
-        {_renderIcon(searching, offline)}
-      </div>
-    </Field>
-  </RForm>
-
-/*
 class Form extends Component {
-  _onSubmit = e => {
-    e.preventDefault()
-    this.props.onSubmit(this._input.value)
+  componentDidMount() {
+    setTimeout(() => {
+      this._input.select()
+    }, 10)
   }
 
   render() {
-    const { placeholder } = this.props
+    const { model, placeholder, onSubmit, searching, offline } = this.props
 
     return (
-      <RForm className="search-form" onSubmit={this._onSubmit}>
-        <div>
+      <RForm model={model} className="search-form" onSubmit={onSubmit}>
+        <Field model=".q">
           <input
             type="text"
             className="form-control"
             placeholder={placeholder}
             ref={c => (this._input = c)}
-            autoFocus
+            autoComplete="off"
           />
           <div className="add-on">
-            <Icon />
+            {_renderIcon(searching, offline)}
           </div>
-        </div>
+        </Field>
       </RForm>
     )
   }
 }
-*/
 
 export default Form
