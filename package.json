@@ -1,6 +1,6 @@
 {
   "name": "bisu-react-search-modal",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "bisu-react-search-modal React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "better-react-spinkit": "2.0.0",
-    "bisu-react-modal": "1.0.8",
+    "bisu-react-modal": "1.0.9",
     "classnames": "2.2.5",
     "react-draggable": "2.2.6",
     "react-icons": "2.2.5"

@@ -17,10 +17,6 @@ const SearchModal = ({
   offline,
   searching,
 }) => {
-  if (!isOpen) {
-    return null
-  }
-
   const cl = cn('bisu--search-modal', className)
 
   return (
@@ -29,8 +25,8 @@ const SearchModal = ({
       overlayClassName={overlayClassName}
       onClose={onClose}
       draggable={draggable}
+      isOpen={isOpen}
       withClose
-      isOpen
     >
       <div className="bisu--search-modal-wrapper">
         <Form

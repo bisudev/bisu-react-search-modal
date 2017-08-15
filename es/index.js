@@ -17,10 +17,6 @@ var SearchModal = function SearchModal(_ref) {
       offline = _ref.offline,
       searching = _ref.searching;
 
-  if (!isOpen) {
-    return null;
-  }
-
   var cl = cn('bisu--search-modal', className);
 
   return React.createElement(
@@ -30,8 +26,8 @@ var SearchModal = function SearchModal(_ref) {
       overlayClassName: overlayClassName,
       onClose: onClose,
       draggable: draggable,
-      withClose: true,
-      isOpen: true
+      isOpen: isOpen,
+      withClose: true
     },
     React.createElement(
       'div',
