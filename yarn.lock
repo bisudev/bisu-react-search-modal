@@ -1144,9 +1144,9 @@ binary-extensions@^1.0.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.9.0.tgz#66506c16ce6f4d6928a5b3cd6a33ca41e941e37b"
 
-bisu-react-modal@1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/bisu-react-modal/-/bisu-react-modal-1.0.9.tgz#e57537907389b90d727966ae1ee0394bd08d1431"
+bisu-react-modal@1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/bisu-react-modal/-/bisu-react-modal-1.0.11.tgz#2dfcc3439c033eaa072c7ce55c61956d354b31d7"
   dependencies:
     classnames "2.2.5"
     react-draggable "2.2.6"
@@ -1211,9 +1211,9 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
-bootstrap-sass@3.3.7:
-  version "3.3.7"
-  resolved "https://registry.yarnpkg.com/bootstrap-sass/-/bootstrap-sass-3.3.7.tgz#6596c7ab40f6637393323ab0bc80d064fc630498"
+bootstrap@4.0.0-beta:
+  version "4.0.0-beta"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.0.0-beta.tgz#dc5928175d2e71310bc668cf9e05a907211b72a6"
 
 bowser@^1.6.0:
   version "1.7.1"

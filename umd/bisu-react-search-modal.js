@@ -1,5 +1,5 @@
 /*!
- * bisu-react-search-modal v1.0.5
+ * bisu-react-search-modal v1.0.6
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -17996,6 +17996,10 @@ var Modal = function Modal(_ref) {
   );
 };
 
+Modal.defaultProps = {
+  overlayClassName: 'dark'
+};
+
 /* harmony default export */ __webpack_exports__["a"] = (Modal);
 
 
@@ -33432,12 +33436,20 @@ var Confirm = function Confirm(_ref) {
         { className: 'modal-footer' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'button',
-          { type: 'button', onClick: onCancel, className: 'btn btn-default' },
+          {
+            type: 'button',
+            onClick: onCancel,
+            className: 'btn btn-secondary btn-sm'
+          },
           'Cancel'
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'button',
-          { type: 'button', onClick: onConfirm, className: 'btn btn-danger' },
+          {
+            type: 'button',
+            onClick: onConfirm,
+            className: 'btn btn-danger btn-sm'
+          },
           'Yes, confirm!'
         )
       )
@@ -33531,7 +33543,11 @@ var Alert = function Alert(_ref) {
         { className: 'modal-footer' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'button',
-          { type: 'button', onClick: onConfirm, className: 'btn btn-info' },
+          {
+            type: 'button',
+            onClick: onConfirm,
+            className: 'btn btn-info btn-sm'
+          },
           okText
         )
       )

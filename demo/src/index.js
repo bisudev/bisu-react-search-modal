@@ -84,8 +84,12 @@ class Demo extends Component {
           </ResultSpan>
         </ResultHeader>
         <ResultItemWrapper>
-          {results.map(item =>
-            <button className="list-group-item">
+          {results.map((item, k) =>
+            <button
+              type="button"
+              key={k}
+              className="list-group-item list-group-item-action"
+            >
               <ResultSpan>
                 {item.get('id')}
               </ResultSpan>
