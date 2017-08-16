@@ -133,7 +133,7 @@ class Demo extends Component {
               onClose={this._closeModal}
               draggable
               offline
-              searching
+              searching={false}
             >
               {this._renderResults()}
             </SearchModal>

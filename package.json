@@ -1,6 +1,6 @@
 {
   "name": "bisu-react-search-modal",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "bisu-react-search-modal React component",
   "main": "lib/index.js",
   "module": "es/index.js",

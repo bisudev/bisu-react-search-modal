@@ -1,5 +1,5 @@
 /*!
- * bisu-react-search-modal v1.0.6
+ * bisu-react-search-modal v1.0.7
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
