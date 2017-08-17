@@ -1144,9 +1144,9 @@ binary-extensions@^1.0.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.9.0.tgz#66506c16ce6f4d6928a5b3cd6a33ca41e941e37b"
 
-bisu-react-modal@1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/bisu-react-modal/-/bisu-react-modal-1.0.9.tgz#e57537907389b90d727966ae1ee0394bd08d1431"
+bisu-react-modal@1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/bisu-react-modal/-/bisu-react-modal-1.0.12.tgz#854546323ee427d405cf9749606d02ba58444aa3"
   dependencies:
     classnames "2.2.5"
     react-draggable "2.2.6"
