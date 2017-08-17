@@ -1,15 +1,10 @@
 {
   "name": "bisu-react-search-modal",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "bisu-react-search-modal React component",
   "main": "lib/index.js",
   "module": "es/index.js",
-  "files": [
-    "css",
-    "es",
-    "lib",
-    "umd"
-  ],
+  "files": ["css", "es", "lib", "umd"],
   "scripts": {
     "build": "nwb build-react-component --copy-files",
     "clean": "nwb clean-module && npm clean-demo",
@@ -50,7 +45,5 @@
   "homepage": "",
   "license": "MIT",
   "repository": "https://github.com/bisudev/bisu-react-search-modal.git",
-  "keywords": [
-    "react-component"
-  ]
+  "keywords": ["react-component"]
 }
